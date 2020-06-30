@@ -48,3 +48,4 @@ Thumbs.db
 #files testin
 app.component.spec.ts
 wcfservice.service.spec.ts
+altaclientes.component.spec.ts
