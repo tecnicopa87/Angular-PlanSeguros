@@ -4,6 +4,6 @@ export class cliente
     nombre:string;
     apellidos:string;
     riesgoProfesion:number;
-    montoIngresos:number;
+    IngresosMensuales:number;
     fecharegistro:any;
 }

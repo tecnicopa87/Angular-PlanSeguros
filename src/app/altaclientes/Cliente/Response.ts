@@ -2,7 +2,11 @@ import { cliente } from './cliente';
 
 export class Response
 {
-    exito:number;
+    /*exito:number;
     mensaje:string;
-    data:cliente;
+    data:cliente;*/
+    CodigoRespuesta:number;
+    Error:string;
+    idCliente:number;
+
 }

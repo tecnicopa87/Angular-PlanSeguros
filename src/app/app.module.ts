@@ -12,6 +12,7 @@ import {ChartsModule} from 'ng2-charts';
 
 // import {SecurityModule} from './security/security.module';
 import { ReactiveFormsModule } from '@angular/forms';/* fundamental Formularios reactivos*/
+import { ListaPlanesComponent } from './lista-planes/lista-planes.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AltaclientesComponent
+    AltaclientesComponent,
+    ListaPlanesComponent
   ],
   imports: [
     BrowserModule,

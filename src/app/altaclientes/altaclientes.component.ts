@@ -33,15 +33,22 @@ export class AltaclientesComponent implements OnInit {
       console.log(`${forma.value[itm]} `);//, ${forma[itm]}`);           
     }            
     
-    const cliente:cliente= {id:0,nombre:collectionFrm.nombre,apellidos:collectionFrm.apellidos,riesgoProfesion:parseInt(collectionFrm.riesgoProfesion),montoIngresos:parseFloat(collectionFrm.montoIngresos),fecharegistro:new Date()};
+    const cliente:cliente= {id:0,nombre:collectionFrm.nombre,apellidos:collectionFrm.apellidos,riesgoProfesion:parseInt(collectionFrm.riesgoProfesion),IngresosMensuales:parseFloat(collectionFrm.montoIngresos),fecharegistro:new Date()};
     
-    this.apiCliente.add(cliente).subscribe(response =>{
-        alert('mandando'+cliente.nombre+' '+cliente.apellidos);
-        if(response.exito==1){
-          this.result=response.mensaje;
-            };
-        },
-  response => console.log('error al insertar Cliente,'+ response['mensaje']));
+  //   this.apiCliente.add(cliente).subscribe(response =>{
+  //       alert('mandando'+cliente.nombre+' '+cliente.apellidos);
+  //       if(response.exito==1){
+  //         this.result=response.mensaje;
+  //           };
+  //       },
+  // response => console.log('error al insertar Cliente,'+ response['mensaje']));
+  this.apiCliente.add(cliente).subscribe(response =>{
+    //alert('mandando'+cliente.nombre+' '+cliente.apellidos);
+    if(response.CodigoRespuesta==200){
+      this.result=response.idCliente.toString();
+        };
+    },
+response => console.log('error al insertar Cliente,'+ response['Error']));
     
    // console.log(this.respWCF);
 if( forma.invalid){
