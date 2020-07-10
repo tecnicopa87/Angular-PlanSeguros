@@ -48,7 +48,7 @@ export class AltaclientesComponent implements OnInit {
       this.result=response.idCliente.toString();
         };
     },
-response => console.log('error al insertar Cliente,'+ response['Error']));
+response => console.log('error al insertar Cliente,'+ response['Mensaje']));
     
    // console.log(this.respWCF);
 if( forma.invalid){
