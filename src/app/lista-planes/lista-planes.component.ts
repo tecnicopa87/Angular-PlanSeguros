@@ -9,6 +9,7 @@ import { Renderer2 } from '@angular/core';
 export class ListaPlanesComponent implements OnInit {
   planes:Array<Object>;
   antiguo:HTMLElement;
+elmsSeleccionados:Array<HTMLElement>;
 
   constructor(private renderer:Renderer2) {
     this.planes=[
@@ -26,16 +27,35 @@ export class ListaPlanesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  mostrarActivo(boton:HTMLElement){ /* HTMLElement requerido p manejar el Render2*/
+  mostrarActivo(elemento:HTMLElement){ /* HTMLElement requerido p manejar el Render2*/
     if(this.antiguo){
       this.renderer.removeClass(this.antiguo,'destacado');
+        
     }
   
-  //this.renderer.addClass(elemento,'destacado');/* así mantengo encapsulamiento*/
+  this.renderer.addClass(elemento,'destacado');/* así mantengo encapsulamiento*/
   //this.renderer.setAttribute(elemento,"data-seleccionado","true");
   
   let nuevoElemento=this.renderer.createElement("span");
-  this.renderer.setProperty(nuevoElemento,"innerHTML","🚗")
+  this.renderer.setProperty(nuevoElemento,"innerHTML"," 🚗")
+  this.renderer.appendChild(elemento,nuevoElemento);
+
+  this.antiguo=elemento;
+  this.elmsSeleccionados.push(elemento);//ir almacenando itms HTML
+
+ // this.renderer.setAttribute(boton,"value","A viajar jk");
   }
+
+  resetActivo(){
+    for (var elem in this.elmsSeleccionados)
+    {
+      console.log(elem);
+      let nuevoElemento=this.renderer.selectRootElement("span");
+      this.renderer.removeClass('destacado',elem);
+      this.renderer.removeChild(elem,nuevoElemento);
+      //this.renderer.addClass(elem,'');/* así mantengo encapsulamiento*/
+    }
+    }
+  
 
 }
