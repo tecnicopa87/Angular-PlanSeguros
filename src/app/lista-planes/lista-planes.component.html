@@ -1,8 +1,8 @@
 <div>
 <div class="card-container">
     <ul>
-        <li *ngFor="let plan of planes" (click)="mostrarActivo(asegurabtn)">{{plan.nombre}}</li>
+        <li *ngFor="let plan of planes" (click)="mostrarActivo(aseguraelem)" #aseguraelem>{{plan.nombre}}</li>
     </ul>
-    <input type="button" disabled value="Tu vida está en riesgo" #asegurabtn>
+    <input type="button" disabled value="Tu vida está en riesgo" #asegurabtn> &nbsp;&nbsp;<input type="button" enabled value="Cancelar"  (click)="resetActivo()" #cancelabtn>
 </div>
 </div>

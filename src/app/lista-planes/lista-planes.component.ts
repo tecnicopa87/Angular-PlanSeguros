@@ -52,7 +52,7 @@ elmsSeleccionados:Array<HTMLElement>;
       console.log(elem);
       let nuevoElemento=this.renderer.selectRootElement("span");
       this.renderer.removeClass('destacado',elem);
-      this.renderer.removeChild(elem,nuevoElemento);
+      this.renderer.removeAttribute(elem,"innerHTML");
       //this.renderer.addClass(elem,'');/* así mantengo encapsulamiento*/
     }
     }
