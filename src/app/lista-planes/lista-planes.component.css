@@ -7,3 +7,8 @@
     transition-timing-function: ease-out;
     cursor: pointer;
 }
+.normal{
+    font-weight:10px;
+    text-align: center;
+    padding: 3px;
+}
