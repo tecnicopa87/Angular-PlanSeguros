@@ -20,4 +20,34 @@
         <button type="submit" [disabled]="!forma.valid">Submit</button>
       </div>
 </form> -->
+<!--control de ng-boostrap -->
+<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+
+<hr />
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb
+  2013</button>
+
+<hr />
+
+<pre>Month: {{ date.month }}.{{ date.year }}</pre>
+<pre>Model: {{ model | json }}</pre>
+<br>
+<label>table-responsive-sm</label>
+<div class="table-responsive-sm">
+      <table class="table">
+        <tr><td>cell1</td></tr>
+        <tr><td>cell1</td></tr>
+        <tr><td>cell1</td></tr>
+      </table>
+    </div>
+    <label>table-responsive-md</label>
+    <div class="table-responsive-md">
+      <table class="table">
+        <tr><td>cell1</td></tr>
+        <tr><td>cell1</td></tr>
+        <tr><td>cell1</td></tr>
+      </table>
+    </div>
 </div>

@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {ChartsModule} from 'ng2-charts';
 
 // import {SecurityModule} from './security/security.module';
+import {RegisterComponent} from './security/register/register.component'; /*en futuro solo se invocaría al Security de la línea anterior */
 import { ReactiveFormsModule } from '@angular/forms';/* fundamental Formularios reactivos*/
 import { ListaPlanesComponent } from './lista-planes/lista-planes.component';
 
@@ -26,7 +27,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     AltaclientesComponent,
-    ListaPlanesComponent
+    ListaPlanesComponent,
+    RegisterComponent /* temporalmente*/
   ],
   imports: [
     BrowserModule,

@@ -41,7 +41,7 @@ elmsSeleccionados:Array<HTMLElement>;
   this.renderer.appendChild(elemento,nuevoElemento);
 
   this.antiguo=elemento;
-  this.elmsSeleccionados.push(elemento);//ir almacenando itms HTML
+ // this.elmsSeleccionados.push(this.antiguo);//ir almacenando itms HTML
 
  // this.renderer.setAttribute(boton,"value","A viajar jk");
   }
