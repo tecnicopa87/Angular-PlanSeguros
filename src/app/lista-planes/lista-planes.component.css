@@ -2,13 +2,29 @@
     background: #b43617;
     padding: 15px;
     color:#fff;
+    text-align: left;
     transition-property: background-color, color;
-    transition-duration: 1s;
+    transition-duration: 1s;    
     transition-timing-function: ease-out;
-    cursor: pointer;
+    cursor: default; 
+   
 }
-.normal{
+.listado{
+    background: #8f5647;  
+}
+.normal{       
     font-weight:10px;
-    text-align: center;
-    padding: 3px;
+    text-align:left;
+    padding: 12px 15px 12px 13px;
+    /*padding-left: 13px;*/    
+    
+}
+.lst {
+    cursor: pointer; /* :grab  */
+    list-style-type: none;  
+    list-style-image: url("src/assets/img/iconPlanes.png");   
+}
+li[data-seleccionado="true"]:not(.destacado){
+    background: #8f5647;  /* silver;*/
+    
 }

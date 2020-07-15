@@ -1,8 +1,9 @@
-<div>
-<div class="card-container">
+<div style="text-align: center;">
+<div class="card-container listado">
     <ul>
-        <li *ngFor="let plan of planes" (click)="mostrarActivo(aseguraelem)" #aseguraelem>{{plan.nombre}}</li>
+        <li class="lst" *ngFor="let plan of planes"  (click)="mostrarActivo(aseguraelem,asegurabtn)" #aseguraelem>{{plan.nombre}}</li>
     </ul>
-    <input type="button" disabled value="Tu vida está en riesgo" #asegurabtn> &nbsp;&nbsp;<input type="button" enabled value="Cancelar"  (click)="resetActivo()" #cancelabtn>
+    <input type="button" name="btnAdquirir" disabled value="Tu vida está en riesgo" #asegurabtn> &nbsp;&nbsp;<input type="button" enabled value="Cancelar"  (click)="resetActivo(asegurabtn)" #cancelabtn>
 </div>
 </div>
+
