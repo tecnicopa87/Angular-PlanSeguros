@@ -1,5 +1,4 @@
 import { Component/*, OnInit*/ } from '@angular/core';
-/*import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';*/
 
 @Component({
   selector: 'app-root',
