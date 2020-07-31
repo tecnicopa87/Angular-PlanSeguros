@@ -1,5 +1,5 @@
 .destacado{
-    background: #b43617;
+    background: #d16813;
     padding: 15px;
     color:#fff;
     text-align: left;
@@ -10,7 +10,7 @@
    
 }
 .listado{
-    background: #8f5647;  
+    background: #917973;  
 }
 .normal{       
     font-weight:10px;
@@ -22,9 +22,11 @@
 .lst {
     cursor: pointer; /* :grab  */
     list-style-type: none;  
-    list-style-image: url("src/assets/img/iconPlanes.png");   
+    list-style-image: url("src/assets/img/iconPlanes.png");  
+     
 }
+
 li[data-seleccionado="true"]:not(.destacado){
-    background: #8f5647;  /* silver;*/
+    background: #917973;  /* silver;*/
     
 }

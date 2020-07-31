@@ -13,7 +13,8 @@ export class AltaclientesComponent implements OnInit {
 
   public micliente:cliente;
   result:string='';
-  
+  tiempoAlert:number;
+
   usuario= {
     nombre:'',
     apellidos:'',
@@ -33,7 +34,14 @@ export class AltaclientesComponent implements OnInit {
       console.log(`${forma.value[itm]} `);//, ${forma[itm]}`);           
     }            
     
-    const cliente:cliente= {id:0,nombre:collectionFrm.nombre,apellidos:collectionFrm.apellidos,riesgoProfesion:parseInt(collectionFrm.riesgoProfesion),IngresosMensuales:parseFloat(collectionFrm.montoIngresos),fecharegistro:new Date()};
+    const cliente:cliente= {
+      id:0,
+      nombre:collectionFrm.nombre,
+      apellidos:collectionFrm.apellidos,
+      riesgoProfesion:parseInt(collectionFrm.riesgoProfesion),
+      IngresosMensuales:parseFloat(collectionFrm.montoIngresos),
+      fecharegistro:new Date()
+    };
     
   //   this.apiCliente.add(cliente).subscribe(response =>{
   //       alert('mandando'+cliente.nombre+' '+cliente.apellidos);
@@ -48,7 +56,7 @@ export class AltaclientesComponent implements OnInit {
       this.result=response.idCliente.toString();
         };
     },
-response => console.log('error al insertar Cliente,'+ response['Mensaje']));
+response => console.log('error al insertar Cliente,'+ response['Error']));
     
    // console.log(this.respWCF);
 if( forma.invalid){
@@ -57,6 +65,11 @@ Object.values(forma.controls).forEach( control=>{
 })
   return ;
 }
+  }
+
+  
+  mostrarAlerta(){
+setTimeout(()=>this.tiempoAlert=3000);
   }
   
 
