@@ -10,10 +10,12 @@
    
 }
 .listado{
-    background: #917973;  
+    background: #c7aba4;      
 }
 .normal{       
-    font-weight:10px;
+    font-weight:18px; 
+    border-width: 5px;
+    border-inline-start-color:#080808;      
     text-align:left;
     padding: 12px 15px 12px 13px;
     /*padding-left: 13px;*/    
@@ -27,6 +29,6 @@
 }
 
 li[data-seleccionado="true"]:not(.destacado){
-    background: #917973;  /* silver;*/
+    background: #c7aba4;  /* silver;*/
     
 }

@@ -1,9 +1,9 @@
 export class cliente 
 {
-    id:number;
-    nombre:string;
-    apellidos:string;
-    riesgoProfesion:number;
+    idCliente:number;
+    Nombre:string;
+    Apellidos:string;
+    RiesgoProfesion:number;    
+    FechaRegistro:Date;
     IngresosMensuales:number;
-    fecharegistro:any;
 }

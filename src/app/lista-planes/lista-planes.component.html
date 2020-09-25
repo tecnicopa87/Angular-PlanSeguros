@@ -1,9 +1,31 @@
 <div style="text-align: center;">
-<div class="card-container listado">
-    <ul>
-        <li class="lst" *ngFor="let plan of planes"  (click)="mostrarActivo(aseguraelem,asegurabtn)" #aseguraelem>{{plan.nombre}}</li>
-    </ul>
-    <input type="button" name="btnAdquirir" disabled value="Tu vida está en riesgo" #asegurabtn> &nbsp;&nbsp;<input type="button" enabled value="Cancelar"  (click)="resetActivo(asegurabtn)" #cancelabtn>
+    <div class="card-container listado">
+        <ul>
+            <li class="lst" *ngFor="let plan of planes" (click)="mostrarActivo(aseguraelem,asegurabtn,plan)"
+                #aseguraelem>{{plan.nombre}}</li>
+        </ul>
+        <hr>
+        <form autocomplete="off" (ngSubmit)="validarfrm(forma)" #forma="ngForm">
+            <div class="form-group row">
+                <div class="col-8">
+                Periodo de: <input type="text" class="form-control" name="txtdias" value="60" required
+                    (keyup)="mandaDias(dias.value)" [ngModel]="modelo.txtdias" [class.is-invalid]="txtdias.invalid && txtdias.touched" 
+                    #dias="ngModel" #txtdias="ngModel"/> dias
+                    <small *ngIf="txtdias.invalid && txtdias.touched"
+               class="form-text text-danger">INDICAR EL NUMERO DE DIAS ES OBLIGATORIO</small> 
+                      <br>Su id
+                Cliente:<input type="text" class="form-control" name="txtidclient" value="1" required
+                     [ngModel]="modelo.txtidclient" [class.is-invalid]="idNoValido"
+                     #txtidclient="ngModel" />
+                     <small *ngIf="txtidclient.invalid && txtidclient.touched" 
+                     class="form-text text-danger">INDIQUE UN No. DE CLIENTE VÁLIDO</small>
+                    </div>
+                     <div class="col-8">
+                <input type="submit" [routerLink]="routerAutorize" name="btnAdquirir" class="btn btn-primary " disabled
+                    value="Tu vida está en riesgo" #asegurabtn> &nbsp;&nbsp;<input type="button" enabled
+                    value="Cancelar" (click)="resetActivo(asegurabtn)" class="btn btn-secondary " #cancelabtn>
+                </div>
+            </div>
+        </form>
+    </div>
 </div>
-</div>
-

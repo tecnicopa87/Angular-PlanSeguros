@@ -1,0 +1,13 @@
+.contrato{
+    font-size: medium;
+    font-family: Cambria; 
+    font-weight: bold;   
+}
+.resena {
+    font-size: small;
+    font-family: Cambria;  
+}
+.fondo {
+    background-color: darkgrey;
+    border: black;
+}
